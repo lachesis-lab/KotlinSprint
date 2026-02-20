@@ -1,13 +1,13 @@
 package org.example.lesson_1
-const val secondPerMinute:Int = 60
 
-fun main(){
-    val seconds = 6481
+const val SECONDS_PER_MINUTE:Int = 60
 
-    val hours = seconds / (secondPerMinute*secondPerMinute)
-    var remSeconds = seconds - hours * secondPerMinute*secondPerMinute
-    val minutes = remSeconds / secondPerMinute
-    remSeconds = seconds - hours * secondPerMinute*secondPerMinute- minutes * secondPerMinute
+fun main() {
+    val seconds = 6480
+    val hours = seconds / (SECONDS_PER_MINUTE * SECONDS_PER_MINUTE)
+    var remSeconds = seconds - hours * SECONDS_PER_MINUTE * SECONDS_PER_MINUTE
+    val minutes = remSeconds / SECONDS_PER_MINUTE
+    remSeconds = seconds - hours * SECONDS_PER_MINUTE * SECONDS_PER_MINUTE - minutes * SECONDS_PER_MINUTE
 
-    println("%02d:%02d:%02d".format(hours, minutes,remSeconds))
+    println("%02d:%02d:%02d".format(hours, minutes, remSeconds))
 }
